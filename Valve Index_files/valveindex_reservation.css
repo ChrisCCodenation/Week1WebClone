@@ -1,0 +1,543 @@
+
+/* MODAL STYLES */
+
+#valveIndexReserveModalContainer {
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.8);
+    align-items: center;
+    justify-content: center;
+}
+
+#valveIndexReserveModalContainer .error_code {
+    text-align: left;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    margin: 30px;
+    opacity: 0.3;
+    display: none;
+}
+
+#valveIndexReserveModalContainer.single_item_mode .multi_item_only {
+    display: none;
+}
+
+#valveIndexReserveModalContainer.multi_item_mode .single_item_only {
+    display: none;
+}
+
+#valveIndexReserveModalContainer.single_item_mode input[type="radio"] {
+    display: none;
+}
+
+#valveIndexReserveModalContainer.single_item_mode label.not_selected {
+    display: none;
+}
+
+#valveIndexReserveModalContainer.single_item_mode label.selected {
+    cursor: default;
+}
+
+.vi_reservation_modal.modal_frame {
+    position: relative;
+    margin-left: calc(50% - 955px / 2);
+    margin-top: 100px;
+    margin-bottom: 100px;
+    width: 955px;
+    z-index: 1000;
+    background-color: #000000;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+}
+
+.vi_reservation_modal .modal_top_band {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-image: url('/public/images/valveindex/modal/modal_header.png');
+    background-size: 955px;
+    background-position: bottom center;
+    background-repeat: no-repeat;
+    width: 955px;
+    height: 75px;
+}
+
+.mobile_top_band_image {
+    display: none;
+}
+
+.vi_reservation_modal .modal_close {
+    margin-top: 3px;
+    margin-right: 40px;
+    flex-grow: 0;
+}
+
+.vi_reservation_modal .modal_close img {
+
+}
+
+.vi_reservation_modal .modal_box {
+    border: none;
+    width: 953px;
+    background-image: url('/public/images/valveindex/modal/modal_bg.png');
+    /*height: 764px;*/
+    background-position: bottom;
+    padding: 1px;
+    display: flex;
+}
+
+.vi_reservation_modal .modal_content {
+    background-color: #262626;
+    background-image: linear-gradient(#222222 0%, #222222 60%, #333333 100%);
+    background-repeat: no-repeat;
+    display: flex;
+    flex-grow: 1;
+    padding-top: 30px;
+    padding-right: 0px;
+    padding-bottom: 30px;
+}
+
+.vi_reservation_modal .modal_right {
+    padding-top: 30px;
+    padding-right: 30px;
+}
+
+.vi_reservation_modal .modal_left {
+    display: flex;
+    flex-direction: column;
+}
+
+#modalBG {
+    position: absolute;
+    z-index: 900;
+    background-color: #000000;
+    filter: alpha(opacity=60);
+    opacity: 0.8;
+}
+
+.vi_reservation_modal h1 {
+    font-size: 2em;
+    margin-bottom: 12px;
+}
+
+.vi_reservation_modal .confirmation_step,
+.vi_reservation_modal .error_state,
+.vi_reservation_modal .covid19delay_state,
+.vi_reservation_modal .covid19undeliverable_state {
+    display: none;
+}
+
+#valveIndexReserveModalContainer .modal_top_band h1:not(.title_default) {
+    display: none;
+}
+
+#valveIndexReserveModalContainer:not(.reservation_error) .error_code {
+    display: none !important;
+}
+
+#valveIndexReserveModalContainer.confirmed .vi_reservation_modal .confirmation_step {
+    display: block;
+}
+
+#valveIndexReserveModalContainer.reservation_error .vi_reservation_modal .error_state {
+    display: block;
+}
+
+#valveIndexReserveModalContainer.covid19delay .vi_reservation_modal .covid19delay_state {
+    display: block;
+}
+
+#valveIndexReserveModalContainer.covid19undeliverable .vi_reservation_modal .covid19undeliverable_state {
+    display: block;
+}
+
+#valveIndexReserveModalContainer .modal_top_band h1.title_default {
+    display: none;
+}
+
+#valveIndexReserveModalContainer.confirmed .modal_top_band h1.title_confirmed {
+    display: initial;
+}
+
+#valveIndexReserveModalContainer.reservation_error .modal_top_band h1.title_reservation_error {
+    display: initial;
+}
+
+#valveIndexReserveModalContainer.covid19delay .modal_top_band h1.title_covid19delay {
+    display: initial;
+}
+
+#valveIndexReserveModalContainer.covid19undeliverable .modal_top_band h1.title_covid19undeliverable {
+    display: initial;
+}
+
+/* CONTENT STYLES */
+
+.vi_reservation_modal p,
+.vi_reservation_modal h1,
+.vi_reservation_modal h2 {
+    font-family: "Motiva Sans", Sans-serif;
+}
+
+.vi_reservation_modal .modal_top_band h1 {
+    flex-grow: 1;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    font-size: 1.4em;
+    margin: 0;
+    margin-left: 40px;
+}
+
+body .vi_reservation_modal h2 {
+    font-size: 1.4em;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    margin-left: 30px;
+    opacity: 1;
+}
+
+.vi_reservation_modal .modal_left p,
+.vi_reservation_modal .modal_left h1 {
+    font-weight: 300;
+    margin-left: 30px;
+    padding: 5px 0;
+    opacity: 0.8;
+}
+
+.vi_reservation_modal.covid19delay .modal_left p,
+.vi_reservation_modal.covid19undeliverable .modal_left p
+{
+    font-size: 1.3em;
+}
+
+.vi_reservation_modal .modal_left p {
+    font-size: 1.2em;
+    line-height: 23px;
+}
+
+.vi_reservation_modal p.nofade {
+    opacity: 1;
+}
+
+.vi_reservation_modal p.disclaimer {
+    opacity: 0.4;
+    order: 200;
+}
+
+.vi_reservation_modal label {
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 30px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-right: 15px;
+    background-color: #333333;
+    padding: 15px;
+}
+
+.vi_reservation_modal label.selected {
+    background-image: linear-gradient(to right, #555555 0%, #333333 20%, #444444 100%);
+    box-shadow: 0px 0px 5px 2px #222222;
+}
+
+.vi_reservation_modal label img {
+    margin-right: 20px;
+}
+
+.vi_reservation_modal label > div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.vi_reservation_modal label > div > div {
+    display: flex;
+    flex-direction: column;
+}
+
+.vi_reservation_modal label input[type="radio"] {
+    display: inline-block;
+    margin-right: 30px;
+    position: relative;
+    top: 3px;
+}
+
+.vi_reservation_modal label input[type="checkbox"] {
+    display: inline-block;
+    margin-right: 30px;
+    position: relative;
+    top: 3px;
+}
+
+.vi_reservation_modal .item_name_mobile {
+    display: none;
+}
+
+.vi_reservation_modal .item_name_desktop {
+    display: inline-block;
+    font-weight: bold;
+    width: 220px;
+    opacity: 0.8;
+    font-size: 1.1em;
+}
+
+.vi_reservation_modal .item_currently_reserved {
+    opacity: 0.6;
+    margin-bottom: 2px;
+    margin-top: 2px;
+    font-style: italic;
+}
+
+.vi_reservation_modal .item_availability {
+    opacity: 0.8;
+}
+
+.vi_reservation_modal .modal_buttons {
+    display: flex;
+    margin-left: 30px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.vi_reservation_modal .modal_buttons a {
+    margin-right: 8px;
+}
+
+.vi_reservation_modal .modal_buttons a span {
+    width: 180px;
+    text-align: center;
+}
+
+.modal_error {
+    display: none;
+}
+
+.reservation_error .modal_error {
+    display: block;
+    margin-left: 30px;
+    margin-bottom: 20px;
+    font-size: 1.2em;
+    color: white;
+}
+
+.index_reservation_table {
+    width: 100%;
+    border-spacing: 0;
+    border: solid 1px #2c405b;
+    margin-bottom: 3em;
+}
+
+.index_reservation_table tr:nth-child(odd) {
+    background-color: rgba( 0, 0, 0, 0.2);
+}
+
+.index_reservation_table th {
+    background-color: #0197cf;
+}
+
+.index_reservation_table th,
+.index_reservation_table td
+{
+    text-align: left;
+    padding-left: 10px;
+}
+
+.index_reservation_table th.vi_reservations_table_status
+{
+    width: 50%;
+}
+
+.index_reservation_table th.vi_reservations_table_actions,
+.index_reservation_table td.vi_reservations_table_actions
+{
+    text-align: center;
+}
+
+.index_reservation_table td.vi_reservations_table_status + td.vi_reservations_table_actions
+{
+    border-left: solid 1px #2c405b;
+}
+
+.index_reservation_table th
+{
+    height: 2.5em;
+    padding-left: 10px;
+}
+
+.index_reservation_table td
+{
+    padding: 10px;
+}
+
+.index_reservation_table td.empty
+{
+    padding: 0;
+}
+
+.index_reservation_table .btn_medium
+{
+    padding: 5px;
+    margin: -5px 0;
+}
+
+.vi_reservation_modal a {
+    color: #66c0f4;
+    text-decoration: underline;
+}
+
+.vi_reservation_modal a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+.index_reservation_table .small_info {
+    color: #7092A5;
+    font-size: 80%;
+    margin-top: 0.5em;
+}
+
+@media screen and (max-width: 910px) {
+    #valveIndexReserveModalContainer {
+        background-color: #333333;
+        align-items: start;
+    }
+
+    body .vi_reservation_modal h2
+    {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .vi_reservation_modal.modal_frame {
+        margin: 0;
+        width: auto;
+    }
+
+    .vi_reservation_modal .modal_top_band {
+        background-color: #222222;
+        background-image: none;
+        height: auto;
+        width: auto;
+        height: 60px;
+    }
+
+    .mobile_top_band_image {
+        transform: scaleX(-1);
+        background-image: url('/public/images/valveindex/modal/modal_header.png');
+        background-size: 100% 85px;
+        display: block;
+        height: 85px;
+        width: 100%;
+        position: absolute;
+        z-index: 1000;
+        -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 1)), to(rgba(0, 0, 0, 0)));
+        mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+    }
+
+    .vi_reservation_modal .modal_close {
+        display: none;
+    }
+
+    .vi_reservation_modal .modal_box {
+        background-image: none;
+        padding: 0;
+        width: auto;
+    }
+
+    .vi_reservation_modal .modal_left {
+        padding: 20px;
+        padding-left: 0;
+    }
+
+    .vi_reservation_modal .modal_right {
+        display: none;
+    }
+
+    .vi_reservation_modal .modal_content {
+        padding-top: 10px;
+    }
+
+    .vi_reservation_modal h1 {
+        font-size: 1.5em;
+        font-weight: 500;
+        margin-left: 20px;
+        margin-top: 20px;
+        z-index: 2000;
+    }
+
+    .vi_reservation_modal h2 {
+        font-size: 1em;
+        letter-spacing: normal;
+        margin-left: 0;
+        margin-right: 20px;
+        margin-top: 10px;
+        margin-bottom: 0px;
+        opacity: 0.6;
+    }
+
+    .vi_reservation_modal p {
+        z-index: 3000;
+        margin-left: 0;
+        margin-right: 20px;
+    }
+
+    .vi_reservation_modal .item_name_desktop {
+        display: none;
+    }
+
+    .vi_reservation_modal .item_name_mobile {
+        display: flex;
+        margin-bottom: 4px;
+        font-size: 1.1em;
+    }
+
+    .vi_additional_context {
+        order: 100;
+    }
+
+    .vi_reservation_modal label {
+        display: flex;
+        margin-left: 0;
+        margin-right: 0;
+        width: auto;
+    }
+
+    .vi_reservation_modal label > div {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+    }
+
+    .vi_reservation_modal label > div > div {
+        margin-top: 4px;
+    }
+
+    .vi_reservation_modal .modal_buttons {
+        flex-direction: column;
+        margin-bottom: 10px;
+        margin-top: 20px;
+        width: 100%;
+    }
+
+    .vi_reservation_modal .modal_buttons a {
+        margin-bottom: 16px;
+    }
+
+    .vi_reservation_modal .modal_buttons a span {
+        width: 180px;
+        text-align: left;
+    }
+}

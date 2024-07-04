@@ -1,0 +1,1579 @@
+
+body.valveindex {
+	--vi-page-background: black;
+	--vi-content-background: rgba(0, 0, 0, 0.40);
+	--vi-container-padding: 22px;
+	--vi-split-row-gutter: 10px;
+	--vi-includes-color: #ffffffbb;
+	--vi-requires-color: #ffffff77;
+	--vi-font-family: "Motiva Sans", Sans-serif;
+	--vi-compat-faded-opacity: 0.4;
+	--vi-compat-faded-color: white;
+
+	background-color: var(--vi-page-background);
+}
+
+body.vi_overview .valveindex_purchase_grid {
+	width: auto;
+}
+
+body.valveindex .valveindex_purchase_option .game_area_purchase_game {
+	--vi-game-area-copy-side-padding: 30px;
+	--vi-game-area-copy-bottom-padding: 70px;
+
+	margin: 0;
+	padding: 0;
+	display: flex;
+	flex-direction: row;
+}
+
+body.valveindex .btn_soft_disabled
+{
+	opacity: 0.45;
+}
+
+body.valveindex .valveindex_purchase_option .game_area_purchase_game,
+body.valveindex .valveindex_purchase_option .game_area_offsite_purchase {
+	position: initial;
+}
+
+body.valveindex .valveindex_purchase_option .game_purchase_action {
+	position: absolute;
+	left: auto;
+	z-index: 100;
+}
+
+body.valveindex .valveindex_purchase_option .game_purchase_action_bg {
+	background: black;
+	border-radius: 4px;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+}
+
+body.valveindex .valveindex_purchase_option .all_purchase_options {
+	display: none;
+}
+
+body.valveindex .valveindex_purchase_option .game_purchase_action .game_purchase_price {
+	border-radius: 3px;
+}
+
+body.valveindex .valveindex_purchase_option .btn_blue_steamui {
+	color: white;
+}
+
+body.valveindex .valveindex_purchase_option .btn_blue_steamui span {
+	font-family: var(--vi-font-family);
+	background: linear-gradient( to right, hsl(201, 0%, 54%) 5%, hsl(225, 0%, 43%) 90%);
+}
+
+body.valveindex .valveindex_purchase_option .btn_blue_steamui:not(.btn_disabled):not(:disabled):hover span {
+	background: linear-gradient( to right, hsl(201, 0%, 64%) 5%, hsl(225, 0%, 53%) 90%);
+}
+
+body.valveindex .valveindex_purchase_option .index_capsule_photo {
+	overflow: hidden;
+	height: auto;
+	width: 200px;
+	flex-shrink: 0;
+	background-color: black;
+}
+
+body.valveindex .valveindex_purchase_option .game_area_purchase_game {
+	flex-grow: 1;
+	padding-bottom: 15px;
+}
+
+body.valveindex .vi_standalone_purchase_option.sku_full_kit .game_area_purchase_game,
+body.valveindex .vi_standalone_purchase_option.sku_partial_kit .game_area_purchase_game,
+body.valveindex .vi_standalone_purchase_option.sku_hmd .game_area_purchase_game,
+body.valveindex .vi_standalone_purchase_option.sku_knuckles .game_area_purchase_game,
+body.valveindex .vi_standalone_purchase_option.sku_bs .game_area_purchase_game {
+	border-top-left-radius: 0;
+	border-bottom-left-radius: 0;
+}
+
+body.valveindex .valveindex_purchase_option .game_area_purchase_game .copy {
+	flex-grow: 1;
+	padding: 1.5em;
+}
+
+body.valveindex .valveindex_purchase_option .game_area_purchase_game .copy .ships {
+	margin-top: 0.3em;
+}
+
+body.valveindex .valveindex_purchase_option .game_area_purchase_game .copy .ships .warning {
+	color: #ffcc6a;
+	margin-top: 0.1em;
+}
+
+body.valveindex .valveindex_purchase_option .game_area_purchase_game .copy .covid19 {
+	margin-top: 0.3em;
+	font-weight: bold;
+}
+
+body.valveindex .valveindex_purchase_option .game_area_purchase_game .copy h1 {
+	font-size: 1.0rem;
+	font-weight: 300;
+	color: #efefef;
+	line-height: 1.2em;
+	letter-spacing: initial;
+	text-transform: none;
+	margin: 0;
+}
+
+body.valveindex .valveindex_purchase_option .game_area_purchase_game .copy h2 {
+	font-size: 0.8rem;
+	font-weight: 200;
+	color: white;
+	opacity: 0.75;
+	line-height: 1.2em;
+	letter-spacing: initial;
+	text-transform: none;
+	margin: 0;
+}
+
+body.valveindex .valveindex_purchase_grid .valveindex_multi_reserve_btn {
+	display: inline-block;
+}
+
+body.valveindex .valveindex_purchase_grid .valveindex_single_reserve_btn,
+body.valveindex .valveindex_multi_reserve_btn {
+	display: none;
+}
+
+body.valveindex .valveindex_purchase_option .sub_info {
+	--vi-sub-info-color: white;
+	margin-top: auto;
+	width: 90%;
+}
+
+body.valveindex .valveindex_purchase_option .sub_info a {
+	white-space: nowrap;
+}
+
+body.valveindex .valveindex_purchase_option .section_content .sub_info {
+	width: initial;
+	line-height: 1.2em;
+}
+
+body.valveindex .valveindex_purchase_option .sub_ships a,
+body.valveindex .valveindex_purchase_option .sub_includes a,
+body.valveindex .valveindex_purchase_option .sub_includes a {
+	text-decoration: underline;
+}
+
+body.valveindex .valveindex_purchase_option .sub_ships,
+body.valveindex .valveindex_purchase_option .sub_ships a {
+	color: var(--vi-sub-info-color);
+}
+
+body.valveindex .valveindex_purchase_option .sub_includes,
+body.valveindex .valveindex_purchase_option .sub_includes a {
+	color: var(--vi-includes-color);
+	padding-top: 4px;
+}
+
+body.valveindex .valveindex_purchase_option .sub_requires {
+	color: var(--vi-requires-color);
+	padding-top: 4px;
+}
+
+body.valveindex .valveindex_purchase_option .sub_requires a {
+	color: var(--vi-requires-color);
+	text-decoration: underline;
+}
+
+body.valveindex .valveindex_purchase_option .sub_ships a:hover,
+body.valveindex .valveindex_purchase_option .sub_includes a:hover,
+body.valveindex .valveindex_purchase_option .sub_requires a:hover {
+	color: white;
+}
+
+.sub_ships_highlight
+{
+	background-color: rgba(0, 0, 0, .25 );
+	border: yellow 1px solid;
+	padding: 5px;
+	padding-left: 10px;
+	font-weight: bold;
+	color: yellow !important;
+	font-size: 14px;
+}
+
+body.valveindex .valveindex_purchase_option .section_content {
+	position: relative;
+	background-size: 100% 100%;
+	background-position: bottom center;
+	background-repeat: no-repeat;
+	min-height: 90px;
+	box-sizing: border-box;
+	margin-bottom: 30px;
+	display: flex;
+	flex-direction: row;
+
+}
+
+/* Overview Page */
+
+body.vi_overview {
+	background-color: black;
+	background-image: url('/public/images/valveindex/overview_background.jpg?t=1');
+	background-size: 2000px 3000px;
+	background-position: top center;
+	background-repeat: no-repeat;
+}
+
+body.vi_overview .blackout {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	background: black;
+	opacity: 0.6;
+	z-index: -10;
+	pointer-events: none;
+}
+
+body.vi_overview .page_content_ctn {
+	padding-top: 0;
+}
+
+body.vi_overview .page_content {
+	box-sizing: border-box;
+}
+
+body.vi_overview .page_cols {
+	display: flex;
+	flex-direction: row;
+	justify-content: stretch;
+	max-width: 940px;
+	margin: auto;
+}
+
+body.vi_overview .page_cols_left,
+body.vi_overview .page_cols_right {
+	background: linear-gradient(
+		to bottom,
+		rgba(0,0,0,0) 0%,
+		var(--vi-content-background) 20%,
+		var(--vi-content-background) 80%,
+		rgba(0,0,0,0) 100%
+	);
+	padding: var(--vi-container-padding);
+}
+
+body.vi_overview .page_cols_left {
+	flex-grow: 1;
+}
+
+body.vi_overview .page_cols_right {
+	margin-left: var(--vi-split-row-gutter);
+	width: 420px;
+}
+
+body.vi_overview .page_cols_right .hlvr_included_sidebar {
+	margin-bottom: var(--vi-container-padding);
+}
+
+body.vi_overview .page_cols_right .hlvr_included_sidebar img {
+	width: 100%;
+	border-radius: 2px;
+}
+
+body.vi_overview .page_cols_right .hlvr_included_sidebar p {
+	font-size: 0.8rem;
+	line-height: initial;
+}
+
+body.vi_overview .index_image {
+	--vi-header-height: 650px;
+	background-image: url('/public/images/valveindex/valveindexheadset.png?t=1');
+	background-repeat: no-repeat;
+	background-position-x: 60px;
+	background-position-y: 0px;
+	background-size: 90%;
+	position: relative;
+	left: -30px;
+	top: 0px;
+	width: 1150px;
+	height: var(--vi-header-height);
+	margin-bottom: calc(var(--vi-header-height) * -1) !important;
+	z-index: 0;
+	pointer-events: none;
+	overflow: hidden;
+}
+
+body.vi_overview .product_header {
+	background: none;
+	padding: 0 var(--vi-container-padding);
+	position: relative;
+	left: calc(var(--vi-product-shift-left) * -1);
+	padding-left: var(--vi-product-shift-left);
+	z-index: 11;
+	background-image: url('/public/images/valveindex/logo_valveindex.png?t=1');
+	background-size: 50%;
+	background-repeat: no-repeat;
+	background-position: bottom left;
+	padding-bottom: 46px;
+	margin-top: 440px;
+}
+
+body.vi_overview .product_header h2 {
+	text-transform: uppercase;
+	font-weight: 400;
+	margin-bottom: 0;
+	font-size: 1.5em;
+	width: 400px;
+	pointer-events: none;
+	padding-left: var(--vi-container-padding);
+	margin-bottom: 0.3em;
+	color: #b0b0b0;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) { /* webkit/edge only */
+	body.vi_overview .product_header h2 {
+		background: linear-gradient(to right, #fff 0%, #aaa 100%);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+	}
+}
+
+body.valveindex .compat_check .section_content {
+	padding: 0;
+	height: 90%;
+}
+
+body.v6.vi_overview #footer {
+	background: none;
+}
+
+body.valveindex .compat_check h3 {
+	text-transform: uppercase;
+	font-size: 1.0em;
+	font-weight: lighter;
+	opacity: var(--vi-compat-faded-opacity);
+	color: var(--vi-compat-faded-color);
+	margin-bottom: 10px;
+}
+
+body.valveindex .valveindex_purchase_grid .compat_check_button {
+	border-radius: 2px;
+}
+
+body.valveindex .compat_check_button .subtitle_mobile {
+	display: none;
+}
+
+body.valveindex .compat_check .compat_table {
+	padding: 15px 12px;
+	font-size: 1.2em;
+	position: relative;
+	pointer-events: none;
+
+	background-image: url('/public/images/valveindex/app_req_bg.png?t=1');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center bottom;
+}
+
+body.valveindex .compat_check .compat_table th {
+	vertical-align: top;
+	text-align: right;
+	opacity: var(--vi-compat-faded-opacity);
+	color: var(--vi-compat-faded-color);
+	font-weight: normal;
+}
+
+body.valveindex .compat_check .compat_table td {
+	vertical-align: top;
+	padding-left: 12px;
+}
+
+body.valveindex .compat_check .compat_table em {
+	display: block;
+	font-size: 0.8em;
+	opacity: var(--vi-compat-faded-opacity);
+	color: var(--vi-compat-faded-color);
+}
+
+body.valveindex .sidebar_gradient_button,
+body.valveindex .sidebar_gradient_button:hover,
+body.valveindex .sidebar_gradient_button:active,
+body.valveindex .game_area_description .sidebar_gradient_button,
+body.valveindex .game_area_description .sidebar_gradient_button:hover,
+body.valveindex .game_area_description .sidebar_gradient_button:active {
+	background: linear-gradient(
+		to right,
+		#2e63c0 0%,
+		#318cc1 100%);
+	display: block;
+	padding: 6px;
+	padding-left: 12px;
+	box-sizing: border-box;
+	width: 100%;
+	position: relative;
+	z-index: 1;
+	color: black;
+	border-radius: 4px;
+	font-family: "Motiva Sans", Sans-serif;
+	text-decoration: none;
+	color: black;
+}
+
+body.valveindex .sidebar_gradient_button.learn_more_button img,
+body.valveindex .game_area_description .sidebar_gradient_button.learn_more_button img {
+	margin-left: -12px;
+	margin-top: -6px;
+	width: calc(100% + 18px);
+	max-width: initial;
+}
+
+body.valveindex .sidebar_gradient_button:hover:not(:active),
+body.valveindex .game_area_description .sidebar_gradient_button:hover:not(:active) {
+	color: black;
+	background: linear-gradient(
+		to right,
+		#318cc1 0%,
+		#40b8ff 100%);
+}
+
+body.valveindex .compat_check_button::before {
+	content: '';
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	/* TODO(drewg): @2x image */
+	background-image: url('/public/images/valveindex/dl_icon.png?t=1');
+	background-position: 13px 8px;
+	background-repeat: no-repeat;
+	background-size: 12px;
+}
+
+body.v6.valveindex .sidebar_gradient_button h2 {
+	font-weight: 500;
+	padding: 0;
+	margin-bottom: 0;
+	text-transform: uppercase;
+	font-size: 1.0rem;
+	letter-spacing: 0.05em;
+}
+
+body.v6.valveindex .compat_check_button h2 {
+	padding-left: 25px;
+}
+
+body.v6.valveindex .sidebar_gradient_button strong {
+	font-size: 1.1em;
+}
+
+body.valveindex .index_capsule_photo {
+	background-size: 100% 130%;
+	position: relative;
+	border-top-left-radius: 4px;
+	border-bottom-left-radius: 4px;
+}
+
+body.valveindex .sku_unknown .index_capsule_photo {
+	background-color: black;
+}
+
+body.valveindex .sku_full_kit .index_capsule_photo {
+	background-image: url('/public/images/valveindex/KitGridItemBG472x350.png?t=1');
+}
+
+body.valveindex .sku_partial_kit .index_capsule_photo {
+	background-image: url('/public/images/valveindex/SmKitGridItemBG472x350.png?t=1');
+}
+
+body.valveindex .sku_hmd .index_capsule_photo {
+	background-image: url('/public/images/valveindex/HeadsetGridItemBG472x350.png?t=1');
+}
+
+body.valveindex .sku_knuckles .index_capsule_photo {
+	background-image: url('/public/images/valveindex/ControllersGridItemBG472x350.png?t=1');
+}
+
+body.valveindex .sku_knuckles_replacement_left .index_capsule_photo,
+body.valveindex .sku_knuckles_replacement_right .index_capsule_photo,
+body.valveindex .sku_tether .index_capsule_photo,
+body.valveindex .sku_face_gasket .index_capsule_photo {
+	display: none;
+}
+
+body.valveindex .sku_bs .index_capsule_photo {
+	background-image: url('/public/images/valveindex/BaseGridItemBG472x350.png?t=1');
+}
+
+body.valveindex .index_capsule_photo::after {
+	content: '';
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	background-size: contain;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+body.valveindex .sku_unknown .index_capsule_photo::after {
+	background-color: black;
+}
+
+body.valveindex .sku_full_kit .index_capsule_photo::after {
+	background-image: url('/public/images/valveindex/store_fullKit.png?t=1');
+}
+
+body.valveindex .sku_partial_kit .index_capsule_photo::after {
+	background-image: url('/public/images/valveindex/store_partialKit.png?t=1');
+}
+
+body.valveindex .sku_hmd .index_capsule_photo::after {
+	background-image: url('/public/images/valveindex/store_hmd.png?t=1');
+}
+
+body.valveindex .sku_knuckles .index_capsule_photo::after {
+	background-image: url('/public/images/valveindex/store_controllers.png?t=1');
+	background-position-y: 20%;
+}
+
+body.valveindex .sku_bs .index_capsule_photo::after {
+	background-image: url('/public/images/valveindex/store_single_base.png?t=1');
+	background-size: 200%;
+	background-position-x: 45%;
+}
+
+body.vi_overview .valveindex_purchase_grid .reqs_inside_top {
+	display: none;
+}
+
+/* App Page */
+
+body.vi_app {
+	--vi-section-background-start: rgba(0, 0, 0, 0.8);
+	--vi-section-background-end: rgba(0, 0, 0, 0.2);
+	--vi-section-spacing: 10px;
+	--vi-section-padding: 16px;
+
+	--vi-page-background: #252a30;
+	--vi-copy-h2-color: #efefef;
+	--vi-copy-color: #b2b2b2;
+	--vi-container-padding: 0px;
+	--vi-requires-color: #000000cc;
+	--vi-requires-color: #ffffffaa;
+
+	background-size: 100vw 200%;
+	background-position: center 100px;
+	background-repeat: no-repeat;
+}
+
+body.vi_app .valveindex_purchase_grid .game_area_purchase_game {
+	--vi-game-area-copy-bottom-padding: 50px;
+}
+
+body.vi_app .valveindex_purchase_grid .compat_check .section_content {
+	display: none;
+}
+
+body.vi_app .valveindex_purchase_grid .reqs_inside_top {
+	display: block;
+}
+
+body.valveindex_headset {
+	/* background-color: #1B2D37; */
+
+	--vi-product-theme-color-a: #16a79b;
+	--vi-product-theme-color-b: #1888b5;
+}
+
+body.valveindex_controllers {
+	/* background-color: #222c36; */
+
+	--vi-product-theme-color-a: #865bb4;
+	--vi-product-theme-color-b: #765bba;
+}
+
+body.valveindex_base_station {
+	/* background-color: #252a30; */
+
+	--vi-product-theme-color-a: #9c59a9;
+	--vi-product-theme-color-b: #c83b6f;
+}
+
+body.vi_app .game_page_background {
+	background: none !important;
+}
+
+body.v6.vi_sub h2.pageheader,
+body.vi_app .apphub_AppName {
+	font-size: 2rem;
+	font-weight: 300;
+	letter-spacing: initial;
+	text-transform: none;
+}
+
+body.v6.vi_sub h2.pageheader {
+	margin-top: 0;
+	margin-bottom: 8px;
+}
+
+body.vi_app .apphub_AppName {
+	margin-top: 8px;
+}
+
+body.vi_app #game_highlights {
+	background: none;
+	padding: 0;
+	margin-bottom: var(--vi-section-spacing);
+}
+
+body.vi_app .highlight_overflow {
+	margin: 0;
+}
+
+body.vi_app #highlight_player_area {
+	--vi-slider-arrow-button-height: 50px;
+	--vi-slider-arrow-flip: 1.0;
+
+	position: relative;
+}
+
+body.vi_app .slider_button {
+	z-index: 10;
+	position: absolute;
+	top: calc( 50% - (var(--vi-slider-arrow-button-height) * 0.5) );
+	height: var(--vi-slider-arrow-button-height);
+	width: var(--vi-slider-arrow-button-height);
+	opacity: 0.5;
+	cursor: pointer;
+}
+
+body.vi_app .slider_button:hover {
+	opacity: 0.9;
+}
+
+body.vi_app .slider_button > span {
+	width: 0;
+	height: 0;
+	border: solid calc( var(--vi-slider-arrow-button-height) / 2 ) transparent;
+	border-right-color: white;
+	display: block;
+	position: relative;
+	left: -50%;
+	transform: scalex(2);
+}
+
+body.vi_app .slider_button.left {
+	transform: scalex(0.55);
+}
+
+body.vi_app .slider_button.right {
+	transform: scalex(-0.55);
+}
+
+body.vi_app #highlight_slider_left {
+	left: 0;
+}
+
+body.vi_app #highlight_slider_right {
+	right: 0;
+}
+
+body.vi_app .queue_ctn {
+	background: var(--vi-section-background-start);
+	margin-bottom: 0;
+}
+
+body.vi_app .block a.linkbar,
+body.vi_app .btnv6_blue_hoverfade {
+	background: rgba(255, 255, 255, 0.1);
+}
+
+body.vi_app .page_content_ctn .btnv6_blue_hoverfade:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active):hover,
+body.vi_app .block a.linkbar:hover {
+	background: linear-gradient(
+		to right,
+		#2e63c0 0%,
+		#318cc1 100%
+	);
+}
+
+body.vi_app .game_description_column,
+body.vi_app .game_meta_data {
+	margin-top: var(--vi-section-spacing);
+}
+
+body.v6.vi_app .block_header h2 {
+	margin-bottom: 0.5em;
+}
+
+body.vi_sub .main_page_content .leftcol,
+body.vi_sub .main_page_content .rightcol {
+	margin-top: 0;
+}
+
+body.vi_app .game_description_column {
+	width: calc( 632px - var(--vi-section-spacing) );
+}
+
+body.vi_app .game_area_description,
+body.vi_app .early_access_announcements {
+	margin-top: 0;
+	padding: var(--vi-section-padding);
+}
+
+body.v6.vi_app .game_area_description h1,
+body.v6.vi_app .game_area_description h1.bb_tag {
+	color: white;
+	font-size: 2rem;
+	margin-bottom: 0.5rem;
+	margin-top: 2rem;
+	font-weight: 500;
+}
+
+body.v6.vi_app h2,
+body.v6.vi_app h2.bb_tag,
+body.v6.vi_app .game_area_description h2,
+body.v6.vi_app .game_area_description h2.bb_tag {
+	color: var(--vi-copy-h2-color);
+	font-size: 1.2rem;
+	margin-bottom: 0rem;
+	font-weight: 500;
+	line-height: 1.2em;
+}
+
+body.vi_app .game_area_description .bb_columnset {
+	display: flex;
+	flex-direction: row;
+}
+
+body.vi_app .game_area_description .bb_column {
+	width: 50%;
+}
+
+body.vi_app .game_area_description .bb_columnset + h1,
+body.vi_app .game_area_description .bb_columnset + h2 {
+	padding-top: 1.5rem;
+}
+
+body.vi_app .game_area_description .bb_column:not(:last-child) {
+	padding-right: 2rem;
+}
+
+body.vi_app .game_area_description .bb_column h1:first-child,
+body.vi_app .game_area_description .bb_column h2:first-child {
+	margin-top: 0;
+}
+
+body.vi_app .game_description_column {
+	color: var(--vi-copy-color);
+}
+
+body.vi_app .game_description_column .block .block_content a {
+	padding: 10px;
+}
+
+body.vi_app .game_area_description .notice_box_content_blue_box h1 {
+	font-size: 1.2rem;
+	font-weight: 300;
+	margin: 0;
+}
+
+body.vi_app .game_area_description a {
+	text-decoration: underline;
+	color: var(--vi-copy-color);
+}
+
+body.vi_app .game_area_description img {
+	max-width: 100%;
+}
+
+body.vi_app .game_area_description a:hover {
+	text-decoration: underline;
+	color: #ffffff;
+}
+
+body.vi_app .game_meta_data {
+	margin-left: var(--vi-section-spacing);
+}
+
+body.vi_app .rightcol.game_meta_data .block {
+	background: none;
+}
+
+body.vi_app .notice_box_content_blue_box {
+	background: linear-gradient(
+		to right,
+		#2e63c0 0%,
+		#318cc1 100%);
+	color: white;
+	margin-bottom: var(--vi-section-padding);
+	border-radius: 2px;
+}
+
+body.vi_app .game_meta_data,
+body.vi_app .game_description_column {
+	background: linear-gradient(
+		to bottom,
+		var(--vi-section-background-start) 40%,
+		transparent 100%
+	);
+	padding-bottom: 40px;
+}
+
+body.vi_app .main_page_content {
+	display: flex;
+	margin-bottom: var(--vi-section-spacing);
+}
+
+body.vi_app .main_page_content .leftcol,
+body.vi_app .main_page_content .rightcol {
+	float: none;
+	padding-bottom: 100px;
+}
+
+body.vi_app .game_description_column .block {
+	padding: 0 var(--vi-section-padding);
+}
+
+body.vi_app .review_box {
+	background-image: none;
+	background-color: var(--vi-section-background-end);
+	margin-top: var(--vi-section-spacing);
+}
+
+body.vi_app .review_box .noReviewsYetTitle {
+	color: white;
+}
+
+body.vi_app .game_description_column h2, .recommendation_bodytext h2 {
+	background-image: none;
+}
+
+body.vi_app .review_ctn {
+	border: none;
+}
+
+body.vi_app .reviews_info_ctn {
+	background: var(--vi-section-background-end);
+	border: none;
+	padding: var(--vi-section-padding);
+}
+
+body.vi_app .user_reviews_header {
+	margin-top: 50px;
+	background-image: none;
+}
+
+body.vi_app .review_histogram_section .user_reviews_summary_bar {
+	border-bottom: none;
+}
+
+body.vi_app .user_reviews_filter_options {
+	background: var(--vi-section-background-end);
+}
+
+body.vi_app .user_reviews_filter_menu:first-child {
+	border-left: none;
+}
+
+body.vi_app .user_reviews_most_helpful_days {
+	color: #e5ebef96;
+}
+
+body.vi_app .review_histogram_section.recent {
+	box-shadow: 0 0 6px #0000002a;
+}
+
+body.vi_app #review_histograms_container,
+body.vi_app .review_recent_events {
+	box-shadow: 0 0 7px #00000080;
+	transition: background-color 0.2s ease-out;
+}
+
+body.vi_app #review_histograms_container.collapsed,
+body.vi_app .review_recent_events {
+	box-shadow: 0 0 7px #00000059;
+	background: rgba(255, 255, 255, 0.07);
+}
+
+body.vi_app #review_histogram_recent_section {
+	background: rgba(255, 255, 255, 0.1);
+}
+
+body.vi_app .rightcol.game_meta_data .block.recommendation_reasons {
+	padding-left: 38px;
+}
+
+body.vi_app .rightcol.game_meta_data .block.recommendation_noinfo {
+	margin-bottom: 32px;
+}
+
+body.vi_app .rightcol.game_meta_data .block {
+	padding: 0 16px;
+	margin-bottom: 16px;
+}
+
+body.vi_app .rightcol.game_meta_data .block.heading {
+	padding-top: var(--vi-section-padding);
+	background: none;
+}
+
+body.vi_app .responsive_apppage_details_right .user_reviews {
+	display: table;
+}
+
+body.vi_app .responsive_apppage_details_right .user_reviews .user_reviews_summary_row {
+	display: table-row;
+}
+
+body.vi_app .responsive_apppage_details_right .user_reviews .column {
+	display: table-cell;
+}
+
+body.vi_app .responsive_apppage_details_right .user_reviews .subtitle {
+	padding-right: 1em;
+	color: #61686d;
+}
+
+body.vi_app .valveindex_purchase_grid {
+	padding: var(--vi-section-padding);
+}
+
+body.vi_app .valveindex_purchase_grid .section_content .sub_info {
+	padding: var(--vi-game-area-copy-side-padding);
+	margin: 0;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	font-size: 0.8rem;
+	line-height: 1.0rem;
+	font-family: "Motiva Sans", Sans-serif;
+}
+
+body.vi_app .valveindex_purchase_grid .section_content .sub_info {
+	--vi-sub-info-color: white;
+}
+
+body.vi_app .compat_check {
+	margin: var(--vi-section-padding);
+}
+
+body.vi_app .compat_check .section_content {
+	padding: 0;
+}
+
+body.vi_app .compat_check .compat_table {
+	font-family: var(--vi-font-family);
+	padding-bottom: 90px;
+	margin-bottom: -90px;
+}
+
+body.valveindex .test_link_mobile {
+	opacity: var(--vi-compat-faded-opacity);
+	color: var(--vi-compat-faded-color);
+	margin-top: 1em;
+	font-size: 0.8rem;
+	text-align: center;
+	display: none;
+}
+
+body.vi_app .compat_check .compat_table th {
+	font-weight: 600;
+}
+
+body.vi_app .sidebar_gradient_button:not(.compat_check_button) {
+	margin: var(--vi-section-padding);
+	width: initial;
+}
+
+body.vi_app #game_area_legal {
+    padding: 0 var(--vi-section-padding);
+}
+
+body.vi_app #game_area_legal a {
+	opacity: 0.4;
+	text-decoration: underline;
+}
+
+body.vi_app #game_area_legal a:hover {
+	color: white;
+	opacity: 1;
+}
+
+body.vi_app .game_description_column .block {
+	margin-bottom: 0;
+}
+
+body.vi_app #package_header_container {
+	background: none;
+	padding-bottom: 0;
+}
+
+body.vi_sub img.package_header {
+	width: 100%;
+	height: auto;
+}
+
+body.v6.vi_app h2 {
+	text-transform: none;
+	letter-spacing: initial;
+}
+
+body.vi_app .game_page_autocollapse_fade {
+	background: linear-gradient(
+		to bottom,
+		rgba(6, 8, 11, 0) 0%,
+		rgba(6, 8, 11, 1) 100%
+	);
+	border-bottom: solid 1px var(--vi-page-background);
+	bottom: 15px;
+}
+
+body.vi_app .game_page_autocollapse_readmore {
+	right: 10px;
+}
+
+body.v6.vi_app #game_area_specs h2.bb_tag {
+	font-size: 0.9rem;
+}
+
+body.vi_app .sys_req {
+	padding: var(--vi-section-padding);
+	margin-top: 0;
+}
+
+body.vi_app .sysreq_tabs {
+	background: none;
+	padding-left: 0;
+}
+
+body.vi_app .sysreq_tab {
+	border-radius: 3px;
+	border: solid 1px rgba(255, 255, 255, 0.2);
+	color: rgba(255, 255, 255, 0.7);
+	background: none;
+}
+
+body.vi_app .sysreq_tab:hover:not(:active) {
+	border-color: rgba(255, 255, 255, 0.3);
+	color: rgba(255, 255, 255, 0.85);
+}
+
+body.vi_app .sysreq_tab.active {
+	border-color: rgba(255, 255, 255, 0.5);
+	color: rgba(255, 255, 255, 0.85);
+}
+
+body.vi_app .game_area_sys_req strong {
+	opacity: var(--vi-compat-faded-opacity);
+	color: var(--vi-compat-faded-color);
+	font-weight: 500;
+}
+
+body.vi_app .sysreq_contents .sysreq_content.active {
+	display: flex;
+	flex-direction: row;
+}
+
+body.vi_app .game_area_sys_req .game_area_sys_req_leftCol,
+body.vi_app .game_area_sys_req .game_area_sys_req_rightCol {
+	width: 50%;
+}
+
+body.valveindex .vi_standalone_purchase_option {
+	--vi-requires-color: #ffffff77;
+
+	margin-left: var(--vi-section-padding);
+	margin-right: var(--vi-section-padding);
+	margin-top: var(--vi-section-padding);
+	margin-bottom: 30px;
+}
+
+body.valveindex .vi_standalone_purchase_option .game_purchase_action {
+	right: 16px;
+}
+
+body.valveindex .vi_standalone_purchase_option .game_area_purchase_game {
+	--vi-game-area-copy-bottom-padding: 35px;
+}
+
+body.valveindex .vi_standalone_purchase_option .learn_more {
+	display: none;
+}
+
+body.valveindex .vi_standalone_purchase_option .section_content .sub_info {
+	top: unset;
+	bottom: 80px;
+}
+
+body.valveindex .vi_standalone_purchase_option.sku_full_kit .section_content .sub_info {
+	top: unset;
+	bottom: 50px;
+}
+
+body.valveindex .vi_standalone_purchase_option .reqs_inside_top {
+	position: absolute;
+	left: 60%;
+}
+
+body.valveindex .vi_standalone_purchase_option .game_area_purchase_game .copy .description {
+	width: auto;
+}
+
+body.valveindex .vi_standalone_purchase_option.sku_full_kit .all_purchase_options,
+body.valveindex .vi_standalone_purchase_option.sku_partial_kit .all_purchase_options,
+body.valveindex .vi_standalone_purchase_option.sku_hmd .all_purchase_options,
+body.valveindex .vi_standalone_purchase_option.sku_knuckles .all_purchase_options,
+body.valveindex .vi_standalone_purchase_option.sku_bs .all_purchase_options {
+	display: inline-block;
+}
+
+body.vi_app .rightcol .review_box.partial .content .gradient,
+body.vi_app .review_box.partial .content .gradient {
+	background: linear-gradient(
+		to bottom,
+		rgba(30, 35, 39, 0) 5%,
+		rgba(30, 35, 39, .95) 95%
+	);
+}
+
+body.valveindex .valveindex_purchase_grid .disclaimer {
+	padding-top: 15px;
+	font-size: 12px;
+}
+
+body.valveindex .valveindex_purchase_grid .legal {
+	padding-top: 10px;
+	font-size: 0.5rem;
+}
+
+body.valveindex .valveindex_purchase_grid .legal a {
+	opacity: 0.5;
+}
+
+body.vi_app #accessory_block {
+	margin-top: 0;
+	position: relative;
+}
+
+body.vi_app #accessory_block::before {
+	content: '';
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: -5px;
+	bottom: 0;
+	border-radius: 6px;
+	box-shadow: -2px -6px 8px 0px #43b3e8ab, 1px 5px 13px 0px #43e89d8c;
+	border: solid 1px #45b1a566;
+	z-index: 1;
+	opacity: 0;
+	pointer-events: none;
+}
+
+body.vi_sub #accessory_block {
+	padding: 16px;
+}
+
+@keyframes highlightFadeOut {
+	0%, 100% { opacity: 0; }
+	10%, 50% { opacity: 1; }
+}
+
+body.vi_app #accessory_block.highlighted::before {
+	animation: highlightFadeOut 3s;
+}
+
+body.vi_sub .sys_req {
+	padding-top: 0;
+	padding-bottom: 0;
+	max-height: none !important;
+}
+
+body.vi_app .reservation_banner {
+	display: block;
+	padding: 20px;
+	background: linear-gradient(
+		to right,
+		#5185B7 0%,
+		#6A6AA0 100%
+	);
+	margin-bottom: var(--vi-section-spacing);
+	color: white;
+	font-size: 0.85rem;
+	font-weight: 600;
+	position: relative;
+}
+
+body.vi_app .reservation_banner h1 {
+	color: black;
+	text-transform: uppercase;
+	font-size: 2rem;
+	font-weight: 300;
+}
+
+body.vi_app .reservation_banner h2 {
+	color: black;
+	font-weight: 500;
+	font-size: 1.8rem;
+	margin-bottom: 0.5rem;
+}
+
+body.vi_app .reservation_banner .banner_image {
+	background-position: right center;
+	background-repeat: no-repeat;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 30px;
+	pointer-events: none;
+}
+
+body.vi_app .reservation_banner .btn_medium {
+	padding: 0.6em 2em;
+	display: block;
+	width: fit-content;
+	margin-top: 0.8em;
+}
+
+body.vi_app .reservation_banner .banner_image.expired {
+	background-image: url('/public/images/valveindex/timesup.png');
+}
+
+body.vi_app .reservation_banner .banner_image.purchase {
+	background-image: url('/public/images/valveindex/banner_ready_to_purchase.png');
+}
+
+body.vi_app .reservation_banner .banner_image.ship {
+	background-image: url('/public/images/valveindex/meep_meep_special_unleaded.png');
+}
+
+body.vi_app #game_area_reviews.game_area_description {
+	margin-top: 0;
+	padding-bottom: 0;
+}
+
+body.vi_app #game_area_reviews p:last-child {
+	margin-bottom: 0;
+}
+
+body.vi_app .game_description_column .block .block_content a img,
+body.vi_app .game_description_column .block .block_content a h4 {
+	width: 140px;
+}
+
+/* Overview Page (mobile) */
+
+body.valveindex .learn_more_mobile,
+body.valveindex .game_area_description .learn_more_mobile {
+	display: none;
+}
+
+@media screen and (max-width: 910px) {
+	body.valveindex,
+	body.valveindex .valveindex_purchase_option .game_area_purchase_game {
+		--vi-game-area-copy-side-padding: 20px;
+		--vi-game-area-copy-bottom-padding: 15px;
+		--vi-section-padding: 12px;
+
+		display: flex;
+		flex-direction: column;
+		margin: 0;
+	}
+
+	body.vi_overview .page_cols {
+		flex-direction: column;
+	}
+
+	body.vi_overview .page_cols_left,
+	body.vi_overview .page_cols_right {
+		width: 100%;
+		margin: 0;
+		box-sizing: border-box;
+	}
+
+	body.valveindex .valveindex_purchase_option .index_capsule_photo {
+		width: 23vw;
+	}
+
+	body.valveindex .test_link_mobile {
+		display: block;
+	}
+
+	body.valveindex .compat_check_button {
+		display: none;
+	}
+
+	body.valveindex .compat_check_button {
+		display: none;
+	}
+
+	body.vi_overview {
+		background: black;
+	}
+
+	body.vi_overview .responsive_page_template_content {
+		background-image: url('/public/images/valveindex/MobileRainbowBG.png?t=1');
+		background-repeat: no-repeat;
+		background-position: top center;
+		background-size: 100% 10%;
+	}
+
+	body.vi_overview .blackout {
+		display: none;
+	}
+
+	body.v6.vi_overview .page_content.product_header {
+		background-size: 80%;
+		padding-bottom: 0;
+		padding-top: 10vw;
+		background-position: center top;
+		width: 100%;
+		padding-left: 0;
+		padding-right: 0;
+		margin: 0;
+		margin-top: 55vw;
+		margin-bottom: 0;
+	}
+
+	body.vi_overview .product_header h2 {
+		font-size: 0.95rem;
+		margin: auto;
+		text-align: center;
+		padding: 0.5em 0;
+		padding-bottom: 3vw;
+		max-width: 100%;
+	}
+
+	body.valveindex .valveindex_purchase_grid .compat_check_button {
+		pointer-events: none;
+		border-radius: 2;
+	}
+
+	body.valveindex .compat_check_button::before {
+		content: none;
+	}
+
+	body.valveindex .compat_check_button h2 {
+		padding-left: 0;
+	}
+
+	body.valveindex .valveindex_purchase_grid .compat_check_button .subtitle_desktop {
+		display: none;
+	}
+
+	body.valveindex .valveindex_purchase_grid .compat_check_button .subtitle_mobile {
+		display: initial;
+		font-size: 0.8rem;
+		font-weight: 400;
+	}
+
+	body.vi_overview .product_header {
+		--vi-product-shift-left: 0px;
+	}
+
+	body.vi_overview .index_image {
+		background-position-x: 0px;
+		background-position-y: 0px;
+		background-size: 100%;
+		left: 0;
+		height: var(--vi-header-height);
+		margin-bottom: calc(var(--vi-header-height) * -1) !important;
+	}
+
+	body.valveindex .valveindex_purchase_grid .compat_check .compat_table::before {
+		left: 0;
+		right: 0;
+	}
+
+	body.valveindex .valveindex_purchase_option .reqs_inside_top {
+		display: block;
+	}
+
+	body.valveindex .valveindex_purchase_grid .section_content .sub_info {
+		padding: 0;
+		position: relative;
+	}
+
+	body.vi_app .valveindex_purchase_grid .section_content {
+		/* padding: 20px; */
+	}
+
+	body.valveindex .valveindex_purchase_option .learn_more {
+		display: inline-block;
+	}
+
+	body.valveindex .valveindex_purchase_option .game_area_purchase_game .copy h1 {
+		font-size: 1.0rem;
+	}
+
+	body.valveindex .valveindex_purchase_grid .sub_ships {
+		color: white;
+	}
+
+	body.valveindex .compat_check .section_content {
+		padding-top: 0;
+	}
+
+	body.valveindex .compat_check .compat_table::before {
+		content: none;
+	}
+
+	body.valveindex .compat_check .compat_table {
+		background-image: url('/public/images/valveindex/app_req_bg.png?t=1');
+		background-size: 100% 100%;
+		background-repeat: no-repeat;
+		background-position: center bottom;
+	}
+
+	body.valveindex .valveindex_purchase_grid .game_purchase_action {
+		top: calc(100% - 20px);
+	}
+
+	body.valveindex .valveindex_purchase_grid .game_purchase_action_bg {
+		border-radius: 2px;
+	}
+
+	body.valveindex .valveindex_purchase_grid .game_area_purchase_platform {
+		bottom: calc( var(--vi-platform-padding) + 25px);
+	}
+
+	body.v6.vi_app .page_content {
+		flex-direction: column;
+	}
+
+	body.vi_app .game_description_column,
+	body.vi_app .game_meta_data {
+		width: 100%;
+	}
+
+	body.vi_app .queue_ctn {
+		margin: 0 2%;
+	}
+
+	body.vi_app #game_area_legal {
+		padding: 0;
+		margin: 0;
+	}
+
+	body.valveindex .valveindex_purchase_grid .legal {
+		padding-top: 0;
+	}
+
+	body.vi_app .game_area_description .bb_columnset {
+		flex-direction: column;
+	}
+
+	body.vi_app .game_area_description .bb_column {
+		width: 100%;
+	}
+
+	body.vi_app .game_area_description .bb_column:not(:first-child) {
+		margin-top: 18px;
+	}
+
+	body.vi_app .main_page_content .leftcol,
+	body.vi_app .main_page_content .rightcol {
+		padding-bottom: var(--vi-section-padding);
+	}
+
+	body.vi_app .main_page_content .leftcol {
+		background: var(--vi-section-background-start);
+	}
+
+	body.vi_app .game_meta_data {
+		margin: 0;
+	}
+
+	body.vi_app .learn_more_desktop {
+		display: none;
+	}
+
+	body.valveindex .learn_more_mobile,
+	body.valveindex .game_area_description .learn_more_mobile {
+		display: block;
+	}
+
+	body.vi_app .sidebar_gradient_button:not(.compat_check_button) {
+		margin: 0;
+	}
+
+	html.responsive body.vi_app .rightcol.game_meta_data .block {
+		background: none;
+	}
+
+	body.valveindex .vi_standalone_purchase_option.sku_full_kit .reqs_inside_top,
+	body.valveindex .vi_standalone_purchase_option.sku_full_kit .section_content .sub_info,
+	body.valveindex .vi_standalone_purchase_option .reqs_inside_top,
+	body.valveindex .vi_standalone_purchase_option .section_content .sub_info {
+		position: relative;
+		top: unset;
+		bottom: unset;
+		left: unset;
+		right: unset;
+	}
+
+	body.valveindex .vi_standalone_purchase_option.sku_full_kit .section_content,
+	body.valveindex .vi_standalone_purchase_option .section_content {
+		height: auto;
+	}
+
+	body.valveindex .vi_standalone_purchase_option .learn_more.view_in_store_bg {
+		display: none;
+	}
+
+	body.vi_app .game_area_purchase_game .game_purchase_action,
+	body.vi_app .game_area_comingsoon .game_purchase_action,
+	body.vi_app .game_area_offsite_purchase .game_purchase_action {
+		right: 0px;
+	}
+
+	body.vi_app .rightcol {
+		margin-bottom: 50px;
+	}
+
+	body.vi_app .page_title_area {
+		padding-bottom: 20px;
+	}
+
+	body.vi_app .apphub_HeaderStandardTop .btn_medium > span {
+		line-height: 22px;
+	}
+
+	body.vi_app .block_responsive_horizontal_scroll.block_content {
+		overflow-x: auto;
+	}
+
+	body.vi_app .reservation_banner {
+		font-size: 0.75rem;
+	}
+
+	body.vi_app .reservation_banner h1 {
+		font-size: 1.6rem;
+	}
+
+	body.vi_app .reservation_banner h2 {
+		font-size: 1.2rem;
+	}
+
+	body.vi_app .reservation_banner .banner_image {
+		display: none;
+	}
+
+	body.vi_app .game_description_column .block .block_content a img,
+	body.vi_app .game_description_column .block .block_content a h4 {
+		max-width: 171px;
+		width: 50vw;
+	}
+
+	body.vi_app .game_description_column .block .block_content a {
+		height: auto;
+	}
+}

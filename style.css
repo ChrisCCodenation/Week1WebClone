@@ -1,0 +1,75 @@
+* {
+    background-color: #171D25 
+       
+}
+
+/* * a{
+    background-size: 50%; */
+
+
+.navbar{
+
+    background-color: #171A21rgb(12, 1, 36);
+    display: flex;
+    justify-content: space-between;
+    justify-content: center;
+    padding: 0 ;
+
+}
+
+
+.steam_logo{
+    
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 100px;
+    width: 300px;
+    /* border: red 1px solid; */
+
+    
+}
+
+.links{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* border: white 1px solid; */
+    width: 18%;
+    margin-left: 100px;
+    
+
+
+}
+/* adding to .link */
+.links a{
+
+    color: white;
+    text-decoration: none;
+    
+
+}
+
+.store{
+color: #1A9FFF;
+    text-decoration: underline;
+}
+
+.topbar{
+    border: #171D25 1px solid 
+     
+
+}
+
+.topbar a{
+
+    background-color: #171D25;fill: #171D25;
+}
+
+/* .hardware{
+        border-color: aqua 1px solid */
+        
+
+
+}
